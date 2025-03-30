@@ -57,6 +57,17 @@ void __attribute__((constructor)) construtor()
     SetConsoleOutputCP(65001);  // Configura o console para usar UTF-8
 }
 
+// CORES
+#define PRETO    "\033[30m"
+#define VERMELHO "\033[31m"
+#define VERDE    "\033[32m"
+#define AMARELO  "\033[33m"
+#define AZUL     "\033[34m"
+#define ROXO     "\033[35m"
+#define CIANO    "\033[36m"
+#define BRANCO   "\033[37m"
+#define RESET    "\033[00m"
+
 // FIM DA BIBLIOTECA
 //////////////////////////////////////////////////
 
@@ -67,6 +78,8 @@ int main ()
     imprimir ("Ç ç\n");      
     imprimir ("α β\n");
     imprimir ("Número: %d, String: %s\n", 42, "Exemplo");
+
+    imprimir (AMARELO "O Terminal" VERMELHO " pode" AZUL " mudar" VERDE " de" ROXO  " cor" CIANO " também!" RESET);
 
     return 0;
 }
